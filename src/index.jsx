@@ -15,8 +15,8 @@ const App = () => {
       <Header />
         <Switch>
           <Route path="/" exact><Home /></Route>
-          <Route path="/works" exact><Works /></Route>
-          <Route path="/about" exact><About /></Route>
+          <Route path="/works"><Works /></Route>
+          <Route path="/about"><About /></Route>
         </Switch>
       </div>
     </Router>
