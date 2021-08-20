@@ -1,12 +1,18 @@
-import React from 'react';
-import { API_URL } from '../../config/config';
+import React, { useState, useEffect } from 'react';
+import { fetchData } from '../../config/fetchData';
 
 const Index = () => {
+  const [works, setWorks] = useState([]);
 
-  console.log(API_URL)
+  useEffect(() => {
+    fetchData(setWorks)
+  }, []);
 
   return (
-    <h2>WORKS—INDEX</h2>
+    <div className="container">
+      <h2>WORKS—INDEX</h2>
+      {works.map((meal) => (<div key={meal.idMeal}>{meal.strMeal}</div>))}
+    </div>
   );
 };
 
