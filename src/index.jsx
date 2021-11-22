@@ -6,7 +6,7 @@ import DataContext from './config/dataContext';
 import './styles/reset.scss';
 import './index.scss';
 import Header from './components/Header';
-import Loader from './components/Loader';
+// import Loader from './components/Loader';
 import Home from './Pages/Home';
 import Works from './Pages/Works';
 import About from './Pages/About';
@@ -28,7 +28,7 @@ const App = () => {
       }}
     >
       <Router>
-        <div className="container__all">
+        <div className="wrapper__application">
         <Header />
           <Switch>
             <Route path="/" exact render={() => <Redirect to="/home" />}/>
