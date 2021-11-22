@@ -31,14 +31,22 @@
 @mixin noScrollBar() {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  *::-webkit-scrollbar {
+    display: none;
+  }
 }
 @mixin noBounce () {
-  overscroll-behavior-y: none;
-  overscroll-behavior-x: none;
+  overscroll-behavior: none;
 }
 @mixin HW100 () {
   height: 100%;
   width: 100%;
+}
+@mixin H100 () {
+  height: 100%;
+}
+@mixin padding () {
+  padding: $padding;
 }
 @mixin gridCenter () {
   display: grid;

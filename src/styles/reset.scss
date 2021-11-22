@@ -1,41 +1,66 @@
 @import './mixins.scss';
 @import './fonts.scss';
+@import './variables.scss';
 
 html {
   text-rendering: optimizeLegibility;
+  min-height: -webkit-fill-available;
 }
-
 body {
   font-family: 'Helvetica Neue';
   @include black();
-  @include noScrollBar();
   @include noBounce();
+  @include noScrollBar();
 }
-
 *, ::after, ::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-
+*::selection {
+  @include white();
+  background-color: $main;
+}
 ul, li {
   list-style: none;
 }
-
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-size: inherit;
 }
-
 a {
   text-decoration: none;
   color: inherit;
   outline: 0;
-  &:active, &:hover {
+  &:active,
+  &:hover {
     outline: 0
   }
 }
-
 em {
   font-style: normal;
+}
+input {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: inherit;
+  font-family: inherit;
+  &:focus {
+    outline: none;
+  }
+}
+*::placeholder {
+  color: inherit;
+  opacity:  1;
+}
+button {
+  background-color: $white;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  border: none;
 }
