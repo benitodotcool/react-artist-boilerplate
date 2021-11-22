@@ -1,3 +1,3 @@
-const API_URL = "https://www.themealdb.com/api/json/v1/1/search.php?f=e";
+const API_URL = "https://www.API.com";
 
 export { API_URL };

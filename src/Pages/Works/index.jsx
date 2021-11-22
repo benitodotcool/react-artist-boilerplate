@@ -1,17 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { fetchData } from '../../config/fetchData';
+import React, { useContext } from 'react';
+import DataContext from '../../config/dataContext';
+import { v4 as uuidv4 } from 'uuid';
 
 const Index = () => {
-  const [works, setWorks] = useState([]);
-
-  useEffect(() => {
-    fetchData(setWorks)
-  }, []);
+  const data = useContext(DataContext);
+  const works = data.works
 
   return (
     <div className="container">
-      <h2>WORKS—INDEX</h2>
-      {works.map((meal) => (<div key={meal.idMeal}>{meal.strMeal}</div>))}
+      <h1>WORKS—INDEX</h1>
+        {
+          works
+          .map((work) => (
+            <div
+              key={uuidv4()}
+            >
+              {work.strMeal}
+            </div>
+          ))
+        }
     </div>
   );
 };
