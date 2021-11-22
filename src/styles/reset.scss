@@ -1,15 +1,15 @@
-@import './variables.scss';
+@import './mixins.scss';
+@import './fonts.scss';
 
 html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
 body {
-  font-family: sans-serif;
-  overscroll-behavior-y: none;
-  overscroll-behavior-x: none;
+  font-family: 'Helvetica Neue';
+  @include black();
+  @include noScrollBar();
+  @include noBounce();
 }
 
 *, ::after, ::after {
@@ -20,4 +20,22 @@ body {
 
 ul, li {
   list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: 0;
+  &:active, &:hover {
+    outline: 0
+  }
+}
+
+em {
+  font-style: normal;
 }

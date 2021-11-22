@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 @mixin tablet-xs {
   @media (min-width: 600px) { @content; }
 }
@@ -15,4 +17,30 @@
 }
 @mixin desktop-lg {
   @media (min-width: 1800px) { @content; }
+}
+@mixin black() {
+  color: $black;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: normal;
+}
+@mixin white() {
+  color: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@mixin noScrollBar() {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@mixin noBounce () {
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+}
+@mixin HW100 () {
+  height: 100%;
+  width: 100%;
+}
+@mixin gridCenter () {
+  display: grid;
+  place-items: center;
 }
