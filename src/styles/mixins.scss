@@ -38,6 +38,9 @@
 @mixin noBounce () {
   overscroll-behavior: none;
 }
+@mixin italic () {
+  font-style: italic;
+}
 @mixin HW100 () {
   height: 100%;
   width: 100%;
@@ -51,4 +54,13 @@
 @mixin gridCenter () {
   display: grid;
   place-items: center;
+}
+@mixin pointer () {
+  cursor: pointer;
+}
+@mixin transparent () {
+  opacity: 0;
+  z-index: -1;
+  user-select: none;
+  pointer-events: none;
 }
