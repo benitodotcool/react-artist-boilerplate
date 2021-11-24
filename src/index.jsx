@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-// import { fetchData } from './config/fetchData';
+import { fetchData } from './config/fetchData';
 import DataContext from './config/dataContext';
 import './styles/reset.scss';
 import './index.scss';
 import Header from './components/Header';
 import Loader from './components/Loader';
-import Home from './Pages/Home';
-import Works from './Pages/Works';
-import About from './Pages/About';
-import Error404 from './Pages/Error404';
+import Home from './pages/Home';
+import Works from './pages/Works';
+import About from './pages/About';
+import Error404 from './pages/Error404';
 
 const App = () => {
   const [works, setWorks] = useState([]);
@@ -19,7 +19,7 @@ const App = () => {
   //   fetchData(setWorks, "/works")
   // }, []);
 
-  // if (works.length === 0) return <Loader />
+  if (works.length === 0) return <Loader />
 
   return (
     <DataContext.Provider
