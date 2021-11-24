@@ -1,14 +1,19 @@
 import React from 'react';
-import Navbar from '../Navbar';
 import { Link } from 'react-router-dom';
+import Navbar from '../Navbar';
+import './header.scss';
 
 const Header = () => {
 
   return (
-    <header>
-      <h1><Link to="/">REACT.JS—BOILERPLATE</Link></h1>
-      <Navbar />
-    </header>
+    <div className="wrapper__header">
+      <header className="container__header">
+        <Link to="/">
+          <p className="small__font">REACT.JS—BOILERPLATE</p>
+        </Link>
+        <Navbar />
+      </header>
+    </div>
   );
 };
 

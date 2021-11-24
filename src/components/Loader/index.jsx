@@ -5,8 +5,8 @@ const Loader = () => {
 
   return (
     <div className="wrapper__loader">
-      <div className="container__loader--all">
-        <p>LOADER</p>
+      <div className="container__loader">
+        <p className="small__font">LOADER</p>
       </div>
     </div>
   )

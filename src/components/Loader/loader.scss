@@ -1,13 +1,13 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
-.wrapper__loader {
-  height: 100%;
-  width: 100%;
+.wrapper__loader,
+.container__loader {
+  @include HW100();
 }
 
-.container__loader--all {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  place-items: center;
+.container__loader {
+  @include gridCenter();
+  @include white();
+  background-color: $main;
 }
