@@ -1,35 +1,42 @@
-@import './mixins.scss';
 @import './fonts.scss';
+@import './mixins.scss';
 @import './variables.scss';
 
 html {
   text-rendering: optimizeLegibility;
   min-height: -webkit-fill-available;
 }
+
 body {
   font-family: 'Helvetica Neue';
   @include black();
   @include noBounce();  
 }
+
 *, ::after, ::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
 * {
   @include noScrollBar();
 }
+
 *::selection {
   @include white();
   background-color: $main;
 }
+
 ul, li {
   list-style: none;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-size: inherit;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -39,9 +46,11 @@ a {
     outline: 0
   }
 }
+
 em {
   font-style: normal;
 }
+
 input {
   border: none;
   background-image: none;
@@ -55,10 +64,12 @@ input {
     outline: none;
   }
 }
+
 *::placeholder {
   color: inherit;
   opacity:  1;
 }
+
 button {
   background-color: $white;
   font-family: inherit;

@@ -29,7 +29,7 @@ const App = () => {
     >
       <Router>
         <div className="wrapper__application">
-        <Header />
+          <Header />
           <Switch>
             <Route path="/" exact render={() => <Redirect to="/home" />}/>
             <Route path="/home" render={() => <Home />}/>
