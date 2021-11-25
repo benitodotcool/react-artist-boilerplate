@@ -9,7 +9,7 @@ html {
 
 body {
   @include black();
-  @include noBounce();  
+  @include noBounce();
 }
 
 *, ::after, ::after {

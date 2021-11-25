@@ -1,17 +1,52 @@
-
-
 .big__font {
-  font-size: 16rem;
-  letter-spacing: -0.5rem;
+  font-size: 140.056px;
+  line-height: 110px;
+  letter-spacing: -0.3rem;
   border: 1px solid red;
+
+  &::before {
+    content: "";
+    margin-bottom: -0.0787em;
+    display: table;
+  }
+  &::after {
+    content: "";
+    margin-top: 0.0073em;
+    display: table;
+  }
 }
 
 .medium__font {
-  font-size: 8rem;
-  letter-spacing: -0.25rem;
+  font-size: 67.2269px;
+  line-height: 68px;
+  letter-spacing: -0.15rem;
   border: 1px solid blue;
+
+  &::before {
+    content: "";
+    margin-bottom: -0.1918em;
+    display: table;
+  }
+  &::after {
+    content: "";
+    margin-top: -0.1058em;
+    display: table;
+  }
 }
 
 .small__font {
+  font-size: 22.409px;
+  line-height: 26px;
   border: 1px solid lime;
+
+  &::before {
+    content: "";
+    margin-bottom: -0.2661em;
+    display: table;
+  }
+  &::after {
+    content: "";
+    margin-top: -0.1801em;
+    display: table;
+  }
 }
