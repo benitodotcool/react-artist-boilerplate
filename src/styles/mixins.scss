@@ -45,6 +45,7 @@
 @mixin desktop {
   @media (min-width: 1440px) { @content; }
 }
+
 @mixin desktop-lg {
   @media (min-width: 1800px) { @content; }
 }
