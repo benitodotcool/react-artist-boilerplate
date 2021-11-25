@@ -1,7 +1,10 @@
+// To find the perfect setup, check https://seek-oss.github.io/capsize/
+
 .big__font {
   font-size: 140.056px;
   line-height: 110px;
   letter-spacing: -0.3rem;
+  // Only for visualization
   border: 1px solid red;
 
   &::before {
@@ -20,6 +23,7 @@
   font-size: 67.2269px;
   line-height: 68px;
   letter-spacing: -0.15rem;
+  // Only for visualization
   border: 1px solid blue;
 
   &::before {
@@ -37,6 +41,7 @@
 .small__font {
   font-size: 22.409px;
   line-height: 26px;
+  // Only for visualization
   border: 1px solid lime;
 
   &::before {
