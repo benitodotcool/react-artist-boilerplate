@@ -1,7 +1,7 @@
 @font-face {
-  font-family: 'HelveticaNeueBold';
-  src: url('../assets/fonts/HelveticaNeueBold.woff2') format('woff2');
-  font-weight: bold;
+  font-family: 'HelveticaNeueMedium';
+  src: url('../assets/fonts/HelveticaNeueMedium.woff2') format('woff2');
+  font-weight: medium;
   font-style: normal;
 }
 
@@ -10,6 +10,6 @@
 }
 
 body {
-  font-family: 'HelveticaNeueBold';
+  font-family: 'HelveticaNeueMedium';
   font-size: 1.6rem;
 }
