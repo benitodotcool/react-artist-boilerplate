@@ -1,36 +1,15 @@
-@import './mixins.scss';
-
-// @font-face {
-//   font-family: 'FontFamily';
-//   src: url('../') format('woff');
-//   font-weight: normal;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'HelveticaNeueBold';
+  src: url('../assets/fonts/HelveticaNeueBold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
 
 :root {
   font-size: 62.5%;
 }
 
 body {
-  font-family: 'Helvetica Neue';
+  font-family: 'HelveticaNeueBold';
   font-size: 1.6rem;
-}
-
-.big__font {
-  @include text-crop($line-height: 1);
-  font-size: 16rem;
-  letter-spacing: -0.5rem;
-  border: 1px solid red;
-}
-
-.medium__font {
-  @include text-crop($line-height: 1.1);
-  font-size: 8rem;
-  letter-spacing: -0.25rem;
-  border: 1px solid blue;
-}
-
-.small__font {
-  @include text-crop($line-height: 1.2);
-  border: 1px solid lime;
 }
