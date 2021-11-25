@@ -4,8 +4,8 @@ import './error404.scss';
 const Error404 = () => {
 
   return (
-    <div className="wrapper__error">
-      <div className="container__error--all">
+    <div className="wrapper__error--page">
+      <div className="container__error--page">
         <p>404 ERROR</p>
       </div>
     </div>

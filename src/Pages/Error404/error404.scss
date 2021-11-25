@@ -1,11 +1,11 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
 
-.wrapper__error {
+.wrapper__error--page {
   @include HW100();
 }
 
-.container__error {
+.container__error--page {
   @include HW100();
   @include gridCenter();
 }

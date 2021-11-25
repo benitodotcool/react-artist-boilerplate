@@ -1,11 +1,14 @@
 @import './styles/variables.scss';
 @import './styles/mixins.scss';
 
-#root {
-  height: 100vh;
-  width: 100vw;
+.wrapper__application {
+  // Some height & width
 }
 
-.wrapper__application {
-  @include HW100();
+.container__application {
+  // Some height & width
+}
+
+.wrapper__switch--main {
+  // Some height & width
 }

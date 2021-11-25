@@ -19,7 +19,7 @@ const App = () => {
   //   fetchData(setWorks, "/works")
   // }, []);
 
-  if (works.length === 0) return <Loader />
+  // if (works.length === 0) return <Loader />
 
   return (
     <DataContext.Provider
@@ -29,14 +29,18 @@ const App = () => {
     >
       <Router>
         <div className="wrapper__application">
-          <Header />
-          <Switch>
-            <Route path="/" exact render={() => <Redirect to="/home" />}/>
-            <Route path="/home" render={() => <Home />}/>
-            <Route path="/works" render={() => <Works />}/>
-            <Route path="/about" render={() => <About />}/>
-            <Route path="*" render={() => <Error404 />}/>
-          </Switch>
+          <div className="container__application">
+            <Header />
+            <div className="wrapper__switch--main">
+              <Switch>
+                <Route path="/" exact render={() => <Redirect to="/home" />}/>
+                <Route path="/home" render={() => <Home />}/>
+                <Route path="/works" render={() => <Works />}/>
+                <Route path="/about" render={() => <About />}/>
+                <Route path="*" render={() => <Error404 />}/>
+              </Switch>
+            </div>
+          </div>
         </div>
       </Router>
     </DataContext.Provider>
