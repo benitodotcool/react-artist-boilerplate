@@ -58,8 +58,6 @@ input {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  font-size: inherit;
-  font-family: inherit;
   &:focus {
     outline: none;
   }
@@ -72,8 +70,13 @@ input {
 
 button {
   background-color: $white;
-  font-family: inherit;
-  font-size: inherit;
   outline: none;
   border: none;
+}
+
+button,
+input,
+textarea,
+section {
+  font: inherit;
 }
