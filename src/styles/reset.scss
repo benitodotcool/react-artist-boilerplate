@@ -27,13 +27,18 @@ body {
   background-color: $main;
 }
 
-ul, li {
-  list-style: none;
+*::placeholder {
+  color: inherit;
+  opacity:  1;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-size: inherit;
+}
+
+ul, li {
+  list-style: none;
 }
 
 a {
@@ -63,13 +68,8 @@ input {
   }
 }
 
-*::placeholder {
-  color: inherit;
-  opacity:  1;
-}
-
 button {
-  background-color: $white;
+  background-color: none;
   outline: none;
   border: none;
 }
