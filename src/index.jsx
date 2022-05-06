@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import ScrollMemory from 'react-router-scroll-memory';
 import { fetchData } from './config/fetchData';
 import DataContext from './config/dataContext';
 import './styles/reset.scss';
 import './index.scss';
 import Header from './components/Header';
-import Loader from './components/Loader';
 import Home from './pages/Home';
 import Works from './pages/Works';
 import About from './pages/About';
@@ -30,7 +28,6 @@ const App = () => {
     >
       <Router>
         <div className="wrapper__application">
-          <ScrollMemory />
           <div className="container__application">
             <Header />
             <div className="wrapper__switch--main">

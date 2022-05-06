@@ -3,13 +3,19 @@
 @import './variables.scss';
 
 html {
+  font-size: 62.5%;
+  font-family: system-ui, sans-serif;
   text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
   min-height: -webkit-fill-available;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   @include black();
   @include noBounce();
+  font-feature-settings: "kern";
 }
 
 *, ::after, ::after {
@@ -18,9 +24,9 @@ body {
   margin: 0;
 }
 
-* {
-  @include noScrollBar();
-}
+// * {
+//   @include noScrollBar();
+// }
 
 *::selection {
   @include white();
