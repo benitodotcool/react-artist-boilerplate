@@ -4,6 +4,6 @@ A boilerplate react specifically created for artists wanting to filter their wor
 
 ## This project includes:
 - node-sass: `^4.14.1`
-- Query url system to filter the `WORKS`
-- Search system
+- query url system to filter the `WORKS`
+- search system
 - ...
