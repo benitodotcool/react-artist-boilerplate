@@ -9,7 +9,7 @@ const Works = ({ works, tags }) => {
   const { queryParams } = useParams();
 
   // console.log(queryParams)
-  // console.log(works)
+  console.log(works)
   console.log(tags)
 
   return (
