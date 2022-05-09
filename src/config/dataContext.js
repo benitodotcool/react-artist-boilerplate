@@ -1,7 +1,5 @@
 import { createContext } from 'react';
 
-const DataContext = createContext({
-  works: null
-});
+const DataContext = createContext({});
 
 export default DataContext;

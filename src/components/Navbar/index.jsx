@@ -3,26 +3,26 @@ import { Link } from 'react-router-dom';
 import './navbar.scss';
 
 const Navbar = () => {
+  const navLinks = [
+    {name: "home", slug: ""},
+    {name: "works", slug: "works"},
+    {name: "contact", slug: "contact"}
+  ]
 
   return (
     <div className="wrapper__navbar">
       <nav className="container__navbar">
         <ul className="nav--items">
-          <li className="nav--item">
-            <Link to="/">
-              <p className="small__font">HOME</p>
-            </Link>
-          </li>
-          <li className="nav--item">
-            <Link to="/works">
-              <p className="small__font">WORKS</p>
-            </Link>
-          </li>
-          <li className="nav--item">
-            <Link to="/about">
-              <p className="small__font">ABOUT</p>
-            </Link>
-          </li>
+          {navLinks.map((link, i) => 
+            <li
+              key={i}
+              className="nav--item"
+            >
+              <Link to={`/${link.slug}`}>
+                <p className="small__font t--CAPS">{link.name}</p>
+              </Link>
+            </li>
+          )}
         </ul>
       </nav>
     </div>

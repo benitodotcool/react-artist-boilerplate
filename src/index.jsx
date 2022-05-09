@@ -1,29 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import { fetchData } from './config/fetchData';
-import DataContext from './config/dataContext';
-import './styles/reset.scss';
-import './index.scss';
-import Header from './components/Header';
-import Home from './pages/Home';
-import Works from './pages/Works';
-import About from './pages/About';
-import Error404 from './pages/Error404';
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { fetchData } from "./config/fetchData";
+import DataContext from "./config/dataContext";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Works from "./pages/Works";
+import Contact from "./pages/Contact";
+import Error404 from "./pages/Error404";
+import "./styles/reset.scss";
 
 const App = () => {
   const [works, setWorks] = useState([]);
+  const [isWorksIsLoaded, setIsWorksLoaded] = useState(false);
+  const [tags, setTags] = useState([]);
+  const [isTagsLoaded, setIsTagsLoaded] = useState(false);
 
-  // useEffect(() => {
-  //   fetchData(setWorks, "/works")
-  // }, []);
+  // Boolean value to check if all data is loaded
+  const [isAllDataLoaded, setIsAllDataLoaded] = useState(false);
 
-  // if (works.length === 0) return <Loader />
+  // All fetch functions
+  useEffect(() => {
+    fetchData(setWorks, "works", setIsWorksLoaded);
+    fetchData(setTags, "tags", setIsTagsLoaded);
+  }, []);
+
+  // Check if all data is loaded
+  useEffect(() => {
+    if (isWorksIsLoaded === true && isTagsLoaded === true) {
+      setIsAllDataLoaded(true);
+    }
+  }, [isWorksIsLoaded, isTagsLoaded]);
 
   return (
     <DataContext.Provider
       value={{
-        works: works
+        works: works,
+        tags: tags,
       }}
     >
       <Router>
@@ -32,11 +45,11 @@ const App = () => {
             <Header />
             <div className="wrapper__switch--main">
               <Switch>
-                <Route path="/" exact render={() => <Redirect to="/home" />}/>
-                <Route path="/home" render={() => <Home />}/>
-                <Route path="/works" render={() => <Works />}/>
-                <Route path="/about" render={() => <About />}/>
-                <Route path="*" render={() => <Error404 />}/>
+                <Route path="/" exact render={() => <Home />} />
+                <Route path="/works" render={() => <Works works={works} tags={tags} />} />
+                <Route path="/works:queryParams" render={() => <Works works={works} tags={tags} />} />
+                <Route path="/contact" render={() => <Contact />} />
+                <Route path="*" render={() => <Error404 />} />
               </Switch>
             </div>
           </div>
@@ -46,4 +59,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));

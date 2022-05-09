@@ -2,9 +2,11 @@
 @import '../../styles/mixins.scss';
 
 .wrapper__header {
-  // Some height & width
+  position: sticky;
+  padding: $padding;
 }
 
 .container__header {
-  // Some height & width
+  display: flex;
+  justify-content: space-between;
 }

@@ -9,7 +9,7 @@ const Header = () => {
     <div className="wrapper__header">
       <header className="container__header">
         <Link to="/">
-          <p className="small__font">REACT.JS—BOILERPLATE</p>
+          <p className="small__font">react-artist-boilerplate</p>
         </Link>
         <Navbar />
       </header>

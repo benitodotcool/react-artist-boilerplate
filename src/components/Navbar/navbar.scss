@@ -6,5 +6,11 @@
 }
 
 .container__navbar {
-  // Some height & width
+  .nav--items {
+    display: flex;
+
+    & *:not(:last-child) {
+      margin-right: $padding;
+    }
+  }
 }

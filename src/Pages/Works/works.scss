@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.wrapper__index {
+  padding: $padding;
+}
+
+.container__index {
+  h1 {
+    margin-bottom: $padding;
+  }
+}

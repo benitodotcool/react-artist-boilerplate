@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.container__filter--tags {
+  display: flex;
+
+  & *:not(:last-child) {
+    margin-right: $padding;
+  }
+}

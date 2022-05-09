@@ -75,9 +75,10 @@ input {
 }
 
 button {
-  background-color: none;
+  background-color: inherit;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 button,
