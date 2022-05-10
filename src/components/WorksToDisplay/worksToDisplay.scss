@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.wrapper__works {
+  margin-top: $padding;
+
+  .container__works {
+    display: grid;
+    grid-gap: $padding;
+  }
+  
+  .work--item {
+    display: grid;
+    grid-template-columns: 10rem 30rem 1fr;
+    grid-gap: $padding;
+  }
+}

@@ -3,18 +3,18 @@ import CustomFont from '../CustomFont';
 import { normalizeQuery } from '../../config/normalize';
 import './tag.scss';
 
-const Tag = ({ tag }) => {
+const Tag = ({ data }) => {
 
   return (
     <button
       className="TAG"
-      data-filter={normalizeQuery(tag.name)}
-      data-is-active={tag.isActive}
+      data-filter={normalizeQuery(data.name)}
+      data-is-active={data.isActive}
     >
       <CustomFont
         tag={"p"}
         className={"small__font t--CAPS"}
-        content={tag.name}
+        content={data.name}
       />
     </button>
   );

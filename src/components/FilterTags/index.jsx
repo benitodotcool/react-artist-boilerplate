@@ -13,7 +13,7 @@ const FilterTags = ({ tags, handleFilterTags }) => {
           className="filter--tag"
           onClick={() => handleFilterTags(tag)}
         >
-          <Tag tag={tag}/>
+          <Tag data={tag}/>
         </li>
       )}
     </ul>

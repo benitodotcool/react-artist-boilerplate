@@ -16,21 +16,24 @@ const App = () => {
   const [tags, setTags] = useState([]);
   const [isTagsLoaded, setIsTagsLoaded] = useState(false);
 
-  // Boolean value to check if all data is loaded
   const [isAllDataLoaded, setIsAllDataLoaded] = useState(false);
 
-  // All fetch functions
   useEffect(() => {
     fetchData(setWorks, "works", setIsWorksLoaded);
     fetchData(setTags, "tags", setIsTagsLoaded);
   }, []);
 
-  // Check if all data is loaded
   useEffect(() => {
-    if (isWorksIsLoaded === true && isTagsLoaded === true) {
-      setIsAllDataLoaded(true);
-    }
-  }, [isWorksIsLoaded, isTagsLoaded]);
+    if (
+      isWorksIsLoaded === true &&
+      isTagsLoaded === true
+      ) {
+        setIsAllDataLoaded(true)
+      }
+  }, [
+    isWorksIsLoaded,
+    isTagsLoaded
+  ]);
 
   return (
     <DataContext.Provider
