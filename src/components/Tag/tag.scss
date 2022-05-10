@@ -5,3 +5,8 @@
   padding: $padding;
   border: $border;
 }
+
+.TAG[data-is-active="true"] {
+  color: $white;
+  background-color: $black;
+}

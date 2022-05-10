@@ -37,6 +37,7 @@ const App = () => {
       value={{
         works: works,
         tags: tags,
+        isAllDataLoaded: isAllDataLoaded
       }}
     >
       <Router>
@@ -46,7 +47,7 @@ const App = () => {
             <div className="wrapper__switch--main">
               <Switch>
                 <Route path="/" exact render={() => <Home />} />
-                <Route path="/works" render={() => <Works works={works} tags={tags} />} />
+                <Route path="/works" exact render={() => <Works works={works} tags={tags} />} />
                 <Route path="/works:queryParams" render={() => <Works works={works} tags={tags} />} />
                 <Route path="/contact" render={() => <Contact />} />
                 <Route path="*" render={() => <Error404 />} />

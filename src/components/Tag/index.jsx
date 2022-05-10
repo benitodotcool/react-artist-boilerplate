@@ -1,5 +1,6 @@
 import React from 'react';
 import CustomFont from '../CustomFont';
+import { normalizeQuery } from '../../config/normalize';
 import './tag.scss';
 
 const Tag = ({ tag }) => {
@@ -7,8 +8,8 @@ const Tag = ({ tag }) => {
   return (
     <button
       className="TAG"
-      data-filter={tag.name}
-      data-is-active={tag.id}
+      data-filter={normalizeQuery(tag.name)}
+      data-is-active={tag.isActive}
     >
       <CustomFont
         tag={"p"}
