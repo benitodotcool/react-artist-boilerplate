@@ -3,7 +3,7 @@
 
 .wrapper__header {
   position: sticky;
-  padding: $padding;
+  padding: $padding $padding 0 $padding;
 }
 
 .container__header {

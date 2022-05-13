@@ -6,7 +6,8 @@ const Navbar = () => {
   const navLinks = [
     {name: "home", slug: ""},
     {name: "works", slug: "works"},
-    {name: "contact", slug: "contact"}
+    {name: "search", slug: "search"},
+    {name: "contact", slug: "contact"},
   ]
 
   return (

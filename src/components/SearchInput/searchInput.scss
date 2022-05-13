@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.container__search--input {
+  display: flex;
+  border: $border;
+  margin-top: $padding;
+
+  input {
+    flex: 1;
+    padding: $padding;
+
+    &::placeholder {
+      color: $grey;
+    }
+  }
+
+  button {
+    border-left: $border;
+    padding: $padding;
+  }
+}
