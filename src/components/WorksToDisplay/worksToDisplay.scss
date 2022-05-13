@@ -9,7 +9,7 @@
     grid-gap: $padding;
   }
   
-  .work--item {
+  .work--item a {
     display: grid;
     grid-template-columns: 10rem 30rem 1fr;
     grid-gap: $padding;

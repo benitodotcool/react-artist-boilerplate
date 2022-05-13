@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.wrapper__work {
+  padding: $padding;
+} 
+
+.container__work {
+  & * {
+    margin-bottom: $padding;
+  }
+  img {
+    max-width: 300px;
+  }
+}

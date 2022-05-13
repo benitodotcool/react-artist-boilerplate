@@ -6,12 +6,14 @@ import DataContext from "./config/dataContext";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Works from "./pages/Works";
+import Work from "./pages/Work";
 import Contact from "./pages/Contact";
 import Search from "./pages/Search";
 import Error404 from "./pages/Error404";
 import "./styles/reset.scss";
 
 const App = () => {
+  const artistName = "FirstName LastName"
   const [works, setWorks] = useState([]);
   const [isWorksIsLoaded, setIsWorksLoaded] = useState(false);
   const [tags, setTags] = useState([]);
@@ -38,6 +40,7 @@ const App = () => {
   return (
     <DataContext.Provider
       value={{
+        artistName: artistName,
         works: works,
         tags: tags,
         isAllDataLoaded: isAllDataLoaded
@@ -52,6 +55,7 @@ const App = () => {
                 <Route path="/" exact render={() => <Home />} />
                 <Route path="/works" exact render={() => <Works works={works} tags={tags} />} />
                 <Route path="/works:queryParams" render={() => <Works works={works} tags={tags} />} />
+                <Route path="/work/:queryParams" render={() => <Work works={works} />} />
                 <Route path="/contact" render={() => <Contact />} />
                 <Route path="/search" exact render={() => <Search works={works} />} />
                 <Route path="/search:queryParams" render={() => <Search works={works} />} />

@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import DataContext from '../../config/dataContext';
 import CustomFont from '../CustomFont';
+import { normalizeQuery } from '../../config/normalize';
 import './worksToDisplay.scss';
 
 const WorksToDisplay = ({ works }) => {
@@ -14,21 +16,23 @@ const WorksToDisplay = ({ works }) => {
             key={i}
             className="work--item"
           >
-            <CustomFont
-              tag={'p'}
-              className={'small__font'}
-              content={work.year}
-            />
-            <CustomFont
-              tag={'p'}
-              className={'small__font'}
-              content={work.tag?.id + '-' + data.tags.find((tag) => tag.id === work.tag?.id)?.name}
-            />
-            <CustomFont
-              tag={'p'}
-              className={'small__font'}
-              content={work.title}
-            />
+            <Link to={`/work/${work.id}=${normalizeQuery(work.title)}`}>
+              <CustomFont
+                tag={'p'}
+                className={'small__font'}
+                content={work.year}
+              />
+              <CustomFont
+                tag={'p'}
+                className={'small__font'}
+                content={work.tag?.id + '-' + data.tags.find((tag) => tag.id === work.tag?.id)?.name}
+              />
+              <CustomFont
+                tag={'p'}
+                className={'small__font'}
+                content={work.title}
+              />
+            </Link>
           </li>
         )}
       </ul>
