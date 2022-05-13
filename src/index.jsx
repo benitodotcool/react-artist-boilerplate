@@ -16,7 +16,6 @@ const App = () => {
   const [isWorksIsLoaded, setIsWorksLoaded] = useState(false);
   const [tags, setTags] = useState([]);
   const [isTagsLoaded, setIsTagsLoaded] = useState(false);
-
   const [isAllDataLoaded, setIsAllDataLoaded] = useState(false);
 
   useEffect(() => {
